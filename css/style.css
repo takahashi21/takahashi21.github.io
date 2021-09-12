@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* color settings */
+:root{
+--color-txt:#333;
+--color-bg:#fff;
+--color-brdr:#999;
+--color-bsdw:#f9fdff;
+--color-main:#5cb7c4;
+--color-sub:#455c63;
+}
+
+/*------------------------------
+ reset 
+------------------------------*/
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{background-repeat:no-repeat;box-sizing:inherit}:after,:before{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0;box-sizing:border-box;}audio:not([controls]){display:none;height:0}hr{overflow:visible}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}summary{display:list-item}small{font-size:80%}[hidden],template{display:none}abbr[title]{border-bottom:1px dotted;text-decoration:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}input{border-radius:0}[role=button],[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=number]{width:auto}[type=search]{-webkit-appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}button{overflow:visible}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:0;padding:0}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button:-moz-focusring{outline:1px dotted ButtonText}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}button,select{text-transform:none}button,input,select,textarea{background-color:transparent;border-style:none;color:inherit}select{-moz-appearance:none;-webkit-appearance:none}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}img{border-style:none;vertical-align: bottom}progress{vertical-align:baseline}svg:not(:root){overflow:hidden}audio,canvas,progress,video{display:inline-block}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){position:absolute!important;clip:rect(0 0 0 0)!important}}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled]{cursor:default}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}ul,ol{list-style:none;}a{text-decoration:none;}.wrapper{overflow:hidden;}body{overflow-y:scroll;}img{max-width: 100%;}
+
+/*------------------------------
+style 
+------------------------------*/
+/* font settings */
+body{
+font-family: 'Open Sans', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+h1,h2,h3{
+font-family: 'Poiret One', cursive, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+/* header */
+#pagetop>header{
+height: 80px;
+}
+.header-inner{
+width:100%;
+height: 80px;
+padding: 0 20px;
+background: var(--color-bg);
+border-bottom: 1px solid var(--color-brdr);
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+top:0;
+z-index: 2;
+}
+header>h1{
+font-size:42px;
+}
+
+/* navigation */
+#g-nav{
+width:50%;
+display: flex;
+justify-content: right;
+align-items: center;
+}
+#ham-btn{
+display: none;
+order: 2;
+width: 44px;
+height: 44px;
+background: var(--color-main);
+}
+#g-nav>ul{
+height: 80px;
+display: flex;
+align-items: center;
+position: fixed;
+top: 0;
+}
+
+/* head-area */
+.head-area{
+width: 100%;
+height: calc(100vh - 80px);
+background: var(--color-main);
+}
+
+/* about */
+#about{
+width: 100%;
+height: 100vh;
+}
+
+/* work */
+#work{
+width: 100%;
+height: 100vh;
+}
+
+/* skill */
+#skill{
+width: 100%;
+height: 100vh;
+}
+
+/* contact */
+#contact{
+width: 100%;
+height: 50vh;
+}
+
+/* to-top btn */
+#to-top{
+display: none;
+width: 80px;
+height: 80px;
+background:var(--color-main);
+border-radius: 40px;
+position: fixed;
+right:20px;
+bottom: 20px;
+}
+#to-top::after{
+content: "";
+display: block;
+width: 32px;
+height: 32px;
+border-right: 8px solid var(--color-bg);
+border-top: 8px solid var(--color-bg);
+transform: rotate(315deg);
+position: absolute;
+top: 16px;
+right: 0;
+bottom: 0;
+left: 0;
+margin:auto;
+}
+
+#to-top:hover{
+opacity:0.8;
+}
+
+/* footer */
+footer{
+width: 100%;
+height: 200px;
+padding-top: 80px;
+background:var(--color-txt);
+}
+footer>p{
+text-align: center;
+color: var(--color-bg);
+}
+
+
+/*------------------------------
+ modal 
+------------------------------*/
+.modal_btn{
+width: 180px;
+height: 40px;
+margin: 0 auto;
+background: var(--color-main);
+color: var(--color-txt);
+}
+
+#modal-1{
+display: none;
+}
+#modal-1.is-open{
+display: block;
+}
+
+.modal-overlay{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2;
+background: rgba(0,0,0,0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.modal-container{
+background-color: var(--color-bg);
+padding: 20px;
+margin: 0 20px;
+width: 80%;
+border-radius: 4px;
+}
+.modal-container>header{
+display: flex;
+justify-content: space-between;
+}
+
+.modal-close-btn{
+display: block;
+width: 120px;
+height: 40px;
+color: var(--color-bg);
+background: var(--color-sub);
+}
+
+.modal-container .images{
+width:200px;
+height:200px;
+background: var(--color-main);
+}
+.modal-container .wrapper{
+display: flex;
+justify-content: center;
+gap: 40px;
+}
+.modal-container .process{
+width:300px;
+height:200px;
+border: 1px solid var(--color-brdr);
+}
+.modal-container .point{
+width:300px;
+height:200px;
+border: 1px solid var(--color-brdr);
+}
+
+/*------------------------------
+media query 
+------------------------------*/
+
