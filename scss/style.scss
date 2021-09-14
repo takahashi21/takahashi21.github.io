@@ -1,0 +1,278 @@
+@use "_reset";
+
+// 
+$col-txt:#333;
+$col-bg:#fff;
+$col-brdr:#999;
+$col-bsdw:#f9fdff;
+$col-main:#5cb7c4;
+$col-sub:#455c63;
+
+//Mixin
+@mixin tab-point {
+@media (max-width:$tab) {
+@content;
+}
+}
+
+@mixin sp-point {
+@media (max-width:$sp) {
+@content;
+}
+}
+
+body{
+font-family: 'Open Sans', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+h1,h2,h3{
+font-family: 'Poiret One', cursive, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+h1{
+font-size: 42px;
+}
+h2{
+font-size: 28px;
+}
+
+//header
+#pagetop>header{
+height: 80px;
+    .header-inner{
+    width:100%;
+    height: 80px;
+    padding: 0 20px;
+    background: $col-bg;
+    border-bottom: 1px solid $col-brdr;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    }
+}
+
+//navigation
+#g-nav{
+width:50%;
+display: flex;
+justify-content: right;
+align-items: center;
+ul{
+width: inherit;
+height: 80px;
+display: flex;
+align-items: center;
+position: fixed;
+top: 0;
+li{
+width: 25%;
+text-align: center;
+&.current{
+a{
+text-decoration: underline 2px $col-main;
+text-underline-offset: 4px;
+}
+}//li.current
+a{
+color: $col-txt;
+}
+}//li
+}//ul
+}
+
+#ham-btn{
+display: none;
+order: 2;
+width: 44px;
+height: 44px;
+background: $col-main;
+}
+
+//head-area
+.head-area{
+width: 100%;
+height: calc(100vh - 80px);
+background: $col-main;
+}
+
+//about
+#about{
+width: 100%;
+height: 100vh;
+}
+
+//work
+#work{
+width: 100%;
+height: 100vh;
+}
+
+//skill
+#skill{
+width: 100%;
+height: 100vh;
+}
+
+//contact
+#contact{
+width: 100%;
+height: 50vh;
+}
+
+//to-top btn
+#to-top{
+display: none;
+width: 60px;
+height: 60px;
+background:$col-main;
+border-radius: 30px;
+position: fixed;
+right:20px;
+bottom: 20px;
+&::after{
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-right: 8px solid $col-bg;
+    border-top: 8px solid $col-bg;
+    transform: rotate(315deg);
+    position: absolute;
+    top: 10px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin:auto;
+}
+&:hover{
+    opacity:0.8;
+}
+}
+
+//footer
+footer{
+width: 100%;
+height: 200px;
+padding-top: 80px;
+background:$col-txt;
+p{
+    text-align: center;
+    color: $col-bg;
+}
+}
+
+/*------------------------------
+ modal 
+------------------------------*/
+.modal_btn{
+width: 180px;
+height: 40px;
+margin: 0 auto;
+background: $col-main;
+color: $col-txt;
+&:hover{
+opacity: 0.8;
+}
+}
+
+#modal-1{
+display: none;
+}
+#modal-1.is-open{
+display: block;
+}
+
+.modal-overlay{
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2;
+background: rgba(0,0,0,0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden auto;
+}
+
+.modal-container{
+width: 80%;
+margin: 0 auto;
+position: absolute;
+top: 20px;
+.modal-container-inner{
+background-color: $col-bg;
+padding: 20px;
+margin: 0 auto 40px;
+width: inherit;
+border-radius: 4px;
+header{
+display: flex;
+justify-content: space-between;
+margin-bottom: 40px;
+}
+.images{
+width:200px;
+height:200px;
+background: $col-main;
+margin-bottom: 40px;
+}
+.txt-box{
+margin-bottom: 40px;
+}
+.wrapper{
+display: flex;
+justify-content: center;
+gap: 40px;
+margin-bottom: 40px;
+.process{
+width:300px;
+height:200px;
+border: 1px solid $col-brdr;
+}
+.point{
+width:300px;
+height:200px;
+border: 1px solid $col-brdr;
+}
+}//.wrapper
+}//.modal-container-inner
+}//.modal-container
+
+.modal-close-btn{
+display: block;
+width: 120px;
+height: 44px;
+color: $col-bg;
+background: $col-sub;
+margin-bottom: 40px;
+&.right-top{
+width: 44px;
+position: relative;
+span{
+display: block;
+width:28px;
+height: 2px;
+background: $col-bg;
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+transform: rotate(45deg);
+&::after{
+content: "";
+display: block;
+width:28px;
+height: 2px;
+background: $col-bg;
+transform: rotate(90deg);
+}
+}//span
+}//close-btn right-top
+}
+
+
