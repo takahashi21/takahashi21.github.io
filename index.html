@@ -9,13 +9,16 @@
     <title>takahashi｜portfolio</title>
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="">
+
     <!--  Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poiret+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body id="pagetop">
@@ -58,24 +61,46 @@
 <div id="modal-1" class="modal-1-container" aria-hidden="true">
 <div class="modal-overlay" tabindex="-1" data-micromodal-close>
 <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-<div class="modal-container-inner">
+
+
+<div id="modal-1-content">
+
 <header>
 <h2 id="modal-1-title">modal-1-title</h2>
-<button class="modal-close-btn right-top" aria-label="Close modal" data-micromodal-close><span></span></button>
 </header>
-<div id="modal-1-content">
-<div class="images"><img src="" alt=""></div>
-<div class="txt-box">
-<p>Lorem, ipsum dolor.</p>
-<p>Lorem ipsum dolor sit amet.</p>
-</div><!-- ./txt-box -->
+
+<button class="modal-close-btn right-top" aria-label="Close modal" data-micromodal-close><span></span></button>
+<div class="images"><img src="img/furniture-store.jpg" alt=""></div>
+
+<dl class="txt-box">
+<dt class="logo"><img src="img/icon-watch.svg" alt=""></dt>
+<dd>作業時間</dd>
+<dt class="logo"><img src="img/icon-pen.svg" alt=""></dt>
+<dd>作業内容</dd>
+</dl><!-- ./txt-box -->
+
 <div class="wrapper">
-<div class="process"></div>
-<div class="point"></div>
+<div class="process">
+<h3>制作工程</h3>
+<ul>
+<li>工程１</li>
+<li>工程２</li>
+<li>工程３</li>
+</ul>
+</div>
+<div class="point">
+<h3>学んだこと</h3>
+<ul>
+<li>内容１</li>
+<li>内容２</li>
+<li>内容３</li>
+</ul>
+</div>
 </div><!-- ./wrapper -->
-<button class="modal-close-btn" aria-label="Close modal" data-micromodal-close>Close</button>
+
+<button class="to-page"><a href="">サイトを表示する</a></button>
+<button class="modal-close-btn ctr-btm" aria-label="Close modal" data-micromodal-close>Close</button>
 </div><!-- #/modal-1-content -->
-</div><!-- ./modal-container-inner -->
 </div>
 </div>
 </div><!-- #/modal-1 -->
@@ -98,6 +123,7 @@
 <!-- script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/micromodal.min.js"></script>
+
 <script src="js/script.js"></script>
 
 </body>

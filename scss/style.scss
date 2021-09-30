@@ -1,14 +1,17 @@
 @use "_reset";
-
-// 
-$col-txt:#333;
+ 
+$col-pri:#509993;
+$col-sec:#153754;
+$col-tert:#b0a596;
+$col-quat:#ebded3;
+$col-txt:#1b191e;
 $col-bg:#fff;
 $col-brdr:#999;
 $col-bsdw:#f9fdff;
-$col-main:#5cb7c4;
-$col-sub:#455c63;
 
-//Mixin
+$tab:959px;
+$sp:767px;
+
 @mixin tab-point {
 @media (max-width:$tab) {
 @content;
@@ -21,22 +24,42 @@ $col-sub:#455c63;
 }
 }
 
+@mixin obj-fit {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+@mixin pos-ctr {
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;    
+}
+
+
 body{
 font-family: 'Open Sans', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 }
+
 h1,h2,h3{
 font-family: 'Poiret One', cursive, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 }
+
 h1{
 font-size: 42px;
 }
+
 h2{
 font-size: 28px;
 }
 
 //header
+
 #pagetop>header{
 height: 80px;
+
     .header-inner{
     width:100%;
     height: 80px;
@@ -50,87 +73,97 @@ height: 80px;
     top:0;
     z-index: 2;
     }
+
 }
 
 //navigation
+
 #g-nav{
 width:50%;
 display: flex;
 justify-content: right;
 align-items: center;
-ul{
-width: inherit;
-height: 80px;
-display: flex;
-align-items: center;
-position: fixed;
-top: 0;
-li{
-width: 25%;
-text-align: center;
-&.current{
-a{
-text-decoration: underline 2px $col-main;
-text-underline-offset: 4px;
+
+    ul{
+    width: inherit;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    }
+
+    li{
+    width: 25%;
+    text-align: center;
+    }
+
+    a{
+    color: $col-txt;
+    }
+
+    li.current>a{
+    text-decoration: underline 2px $col-pri;
+    text-underline-offset: 4px;
+    }
+
+    #ls-0.current>a{
+    text-decoration: none;
+    }
+
 }
-}//li.current
-a{
-color: $col-txt;
-}
-}//li
-}//ul
-}
+
 
 #ham-btn{
 display: none;
 order: 2;
 width: 44px;
 height: 44px;
-background: $col-main;
+background: $col-pri;
 }
 
 //head-area
+
 .head-area{
 width: 100%;
-height: calc(100vh - 80px);
-background: $col-main;
+height: 50vh;
+background: $col-pri;
+}
+
+
+section{
+width: 100%;
+height: 100vh;
+padding: 0 16px;
+margin: 0 auto 96px;
 }
 
 //about
-#about{
-width: 100%;
-height: 100vh;
-}
 
 //work
-#work{
-width: 100%;
-height: 100vh;
-}
 
 //skill
-#skill{
-width: 100%;
-height: 100vh;
-}
 
 //contact
+
 #contact{
-width: 100%;
 height: 50vh;
+margin: 0 auto 96px;
 }
 
 //to-top btn
+
 #to-top{
 display: none;
 width: 60px;
 height: 60px;
-background:$col-main;
+background:$col-pri;
 border-radius: 30px;
 position: fixed;
 right:20px;
 bottom: 20px;
-&::after{
+
+    &::after{
     content: "";
     display: block;
     width: 24px;
@@ -144,135 +177,203 @@ bottom: 20px;
     bottom: 0;
     left: 0;
     margin:auto;
-}
-&:hover{
+    }
+
+    &:hover{
     opacity:0.8;
-}
+    }
+
 }
 
 //footer
+
 footer{
 width: 100%;
 height: 200px;
 padding-top: 80px;
 background:$col-txt;
-p{
+
+    p{
     text-align: center;
     color: $col-bg;
-}
+    }
+
 }
 
-/*------------------------------
- modal 
-------------------------------*/
+//modal
+
 .modal_btn{
 width: 180px;
 height: 40px;
 margin: 0 auto;
-background: $col-main;
+background: $col-pri;
 color: $col-txt;
-&:hover{
-opacity: 0.8;
-}
+
+    &:hover{
+    opacity: 0.8;
+    }
+
 }
 
 #modal-1{
 display: none;
 }
+
 #modal-1.is-open{
 display: block;
 }
 
 .modal-overlay{
 position: fixed;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
+@include pos-ctr;
 z-index: 2;
 background: rgba(0,0,0,0.5);
 display: flex;
 justify-content: center;
 align-items: center;
 overflow: hidden auto;
+padding-bottom: 20px;
 }
 
 .modal-container{
-width: 80%;
-margin: 0 auto;
+width: 90%;
 position: absolute;
 top: 20px;
-.modal-container-inner{
+
+    header{
+    margin-bottom: 32px;
+    }
+
+    h2{
+    width: 100%;
+    text-align: center;
+    }
+
+    .images{
+    width:100%;
+    margin: 0 auto 40px;
+
+        img{
+        @include obj-fit;
+        }
+
+    }
+
+    .txt-box{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+
+        dd{
+        width: calc(100% - 54px);
+        }
+
+        .logo{
+        width: 44px;
+        height: 44px;
+        }
+
+        img{
+        @include obj-fit;
+        }
+
+    }
+
+    .wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    }
+
+    ul{
+    padding-left: 24px;
+    list-style-type: disc;
+    }
+
+    .process{
+    width:300px;
+    height:200px;
+    border: 1px solid $col-brdr;
+    }
+
+    .point{
+    width:300px;
+    height:200px;
+    border: 1px solid $col-brdr;
+    }
+
+    button:hover{
+    opacity: 0.8;
+    }
+
+    a{
+    color: $col-bg;
+    }
+
+}//.modal-container
+
+#modal-1-content{
+max-width: 1080px;
 background-color: $col-bg;
 padding: 20px;
-margin: 0 auto 40px;
-width: inherit;
 border-radius: 4px;
-header{
-display: flex;
-justify-content: space-between;
-margin-bottom: 40px;
+margin: 0 auto 32px;
+position: relative;
 }
-.images{
-width:200px;
-height:200px;
-background: $col-main;
-margin-bottom: 40px;
+
+.to-page{
+display: block;
+width: 160px;
+height: 44px;
+color: $col-bg;
+background: $col-sec;
+margin: 0 auto 40px;
 }
-.txt-box{
-margin-bottom: 40px;
-}
-.wrapper{
-display: flex;
-justify-content: center;
-gap: 40px;
-margin-bottom: 40px;
-.process{
-width:300px;
-height:200px;
-border: 1px solid $col-brdr;
-}
-.point{
-width:300px;
-height:200px;
-border: 1px solid $col-brdr;
-}
-}//.wrapper
-}//.modal-container-inner
-}//.modal-container
 
 .modal-close-btn{
 display: block;
 width: 120px;
 height: 44px;
 color: $col-bg;
-background: $col-sub;
-margin-bottom: 40px;
-&.right-top{
-width: 44px;
-position: relative;
-span{
-display: block;
-width:28px;
-height: 2px;
-background: $col-bg;
-position: absolute;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-margin: auto;
-transform: rotate(45deg);
-&::after{
-content: "";
-display: block;
-width:28px;
-height: 2px;
-background: $col-bg;
-transform: rotate(90deg);
+background: $col-sec;
 }
-}//span
-}//close-btn right-top
+
+.modal-close-btn.ctr-btm{
+margin: 0 auto 40px;
+}
+
+.modal-close-btn.right-top{
+width: 44px;
+position: absolute;
+top: 10px;
+right: 10px;
+
+    span{
+    display: block;
+    width:28px;
+    height: 2px;
+    background: $col-bg;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: rotate(45deg);
+    }
+
+    span::after{
+    content: "";
+    display: block;
+    width:28px;
+    height: 2px;
+    background: $col-bg;
+    transform: rotate(90deg);
+    }
+
 }
 
 
