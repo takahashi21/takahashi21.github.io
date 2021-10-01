@@ -1,0 +1,166 @@
+@use "settings" as s;
+
+.logo-wrapper{
+width:100%;
+height: calc(45vh - 60px);
+margin: 0 auto;
+padding:0 16px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 16px;
+
+    @include s.tab(){
+    height: 96px;
+    flex-direction: row;
+    margin: 0 auto 0;
+    justify-content: space-between;
+    };
+
+    @include s.pc(){
+    max-width: 1080px;
+    };
+
+}
+
+
+.logo{
+width: 192px;
+height: 44px;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+
+    @include s.pc(){
+    width: 320px;
+    height: 64px;
+    };
+
+    &:hover{
+    opacity: 0.8;
+    }
+
+    a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 16px;
+    }
+
+    img{
+    display: block;
+    }
+
+    .logo-left{
+    width: 44px;
+    height:44px;
+
+        @include s.pc(){
+        width: 64px;
+        height:64px;
+        };
+
+    }
+
+    .logo-right{
+    width: calc(32px * 4);
+
+        @include s.pc(){
+        width: calc(64px * 3.5);
+        };
+
+    }
+
+}
+
+.logo-wrp-inner{
+display: flex;
+flex-direction: column;
+gap: 8px;
+
+    @include s.tab(){
+    justify-content: left;    
+    };
+
+    .tel{
+    display: block;
+    line-height:24px;
+    color: s.$col-txt;
+    text-align: center;
+
+        @include s.tab(){
+        text-align: right;
+        };
+
+        @include s.pc(){
+        pointer-events: none;
+        };
+
+        .icon-svg{
+        width:24px;
+        height:24px;
+        }
+
+    }
+
+    .tel>span{
+    font-size: 16px;
+
+        @include s.pc(){
+        font-size: 18px;
+        };
+
+    }
+
+    .address{
+    font-size: 14px;
+
+        @include s.pc(){
+        font-size: 18px
+        };
+
+    }
+
+}
+
+.contact-link{
+@include s.btn();
+padding-right: 16px;
+color: s.$col-pri;
+background: s.$col-bg;
+border:2px solid s.$col-pri;
+position: relative;
+
+    span{
+    @include s.btn-arw(s.$col-pri);
+    position: absolute;
+    right: 8px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    }
+
+    &:hover{
+    color: s.$col-bg;
+    background: s.$col-pri;
+    }
+
+    &:hover span{
+    border-top: 2px solid s.$col-bg;
+    border-right: 2px solid s.$col-bg;
+    }
+
+}
+
+header .logo-wrapper{
+margin: 0 auto 0;
+position: absolute;
+top: 44px;
+
+    @include s.tab(){
+    position: unset;
+    top: 0;
+    };
+
+}

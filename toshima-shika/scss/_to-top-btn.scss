@@ -1,0 +1,60 @@
+@use "_settings.scss" as s;
+
+#btn-wrapper{
+width:64px;
+height:144px;
+position:fixed;
+bottom:208px;
+right:8px;
+display:flex;
+flex-direction: column;
+justify-content: space-between;
+
+    a{
+    display:block;
+    width:64px;
+    height:64px;
+    background: s.$col-sec;
+    border-radius:32px;
+    white-space: nowrap;
+    text-indent:100%;
+    overflow:hidden;
+    position:relative;
+    }
+
+    a::before{
+    content:"";
+    width:18px;
+    height:18px;
+    display:inline-block;
+    border-right:4px solid s.$col-bg;
+    border-top:4px solid s.$col-bg;
+    transform: rotate(315deg);
+    position:absolute;
+    @include s.pos-ctr();
+    }
+
+}
+
+#to-top{
+opacity:0.75;
+
+    &:hover{
+    opacity: 1;
+    }
+
+}
+
+#to-btm{
+opacity:0.75;
+
+    &:hover{
+    opacity: 1;
+    }
+
+}
+
+#btn-wrapper>#to-btm::before{
+bottom:8px;
+transform: rotate(135deg);
+}

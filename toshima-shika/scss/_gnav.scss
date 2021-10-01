@@ -1,0 +1,143 @@
+@use "settings" as s;
+
+#g-nav{
+visibility: hidden;
+opacity: 0;
+width:100%;
+height: 100vh;
+background: s.$col-pri;
+position:fixed;
+top:0;
+z-index:5;
+padding: 96px 20px;
+
+    &.is-active{
+    visibility: visible;
+    opacity: 1;
+    }
+
+    @include s.tab(){
+    visibility: visible;
+    opacity: 1;
+    height: 48px;
+    background: s.$col-bg;
+    position: unset;
+    padding: 0 20px;
+    };
+
+    .logo{
+    width: auto;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 8px;
+    left: 8px;
+
+        @include s.tab(){
+        display: none;
+        };
+
+    }
+
+    .logo-right>img{
+    filter: brightness(500%);
+    }
+
+    ul{
+    width: 80%;
+    height: 48px;
+    margin: 0 auto;
+    text-align: center;
+
+        @include s.tab(){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1080px;
+        };
+
+    }
+
+    li{
+    padding-bottom: 4px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid s.$col-bg;
+
+        @include s.tab(){
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+        };
+
+    }
+
+    a{
+    color: s.$col-bg;
+
+        @include s.tab(){
+        color: s.$col-txt;
+        padding: 0 8px;
+        font-size: 14px;
+        display: block;
+        };
+
+        @include s.pc(){
+        padding: 0 16px;
+        font-size: 18px;
+        display: inline-block;
+        };
+
+        &:hover{
+        border-bottom: 2px solid s.$col-sec;
+        }
+
+    }
+
+    li.current>a{
+    font-weight: bold;
+
+        &:hover{
+        border-bottom: none;
+        }
+
+    }
+
+    span{
+    margin-left: 10px;
+    font-size: 14px;
+
+        @include s.tab(){
+        margin-left: 0;
+        display: block;
+        };
+
+        @include s.pc(){
+        margin-left: 10px;
+        display: inline-block;
+        };
+
+    }
+
+    span::before{
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 20px;
+    border-right: 1px solid s.$col-bg;
+    transform: rotate(15deg);
+    margin-right: 10px;
+
+        @include s.tab(){
+        display: none;
+        };
+
+        @include s.pc(){
+        display: inline-block;
+        border-right: 1px solid s.$col-txt;
+        };
+
+    }
+
+}

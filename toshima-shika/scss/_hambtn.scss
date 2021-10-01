@@ -1,0 +1,63 @@
+@use "settings" as s;
+
+#ham-btn{
+display: block;
+width: 60px;
+height: 60px;
+background: s.$col-pri;
+position: fixed;
+top: 0;
+right: 0;
+z-index:10;
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+
+    @include s.tab(){
+    display: none;
+    };
+
+    span{
+    width:32px;
+    height: 2px;
+    background: s.$col-bg;
+    position: absolute;
+    @include s.pos-ctr();
+
+        &::before{
+        content: "";
+        width:32px;
+        height: 2px;
+        background: s.$col-bg;
+        position: absolute;
+        @include s.pos-ctr();
+        top:12px;
+        }
+
+        &::after{
+        content: "";
+        width:32px;
+        height: 2px;
+        background: s.$col-bg;
+        position: absolute;
+        @include s.pos-ctr();
+        bottom: 12px;
+        }
+    }
+
+    &.is-active>span{
+    transform: rotate(45deg);
+    transition: 0.2s;
+    }
+
+    &.is-active>span::before{
+    top: 0;
+    transform: rotate(90deg);
+    transition: 0.2s;
+    }
+
+    &.is-active>span::after{
+    display: none;
+    }
+
+}

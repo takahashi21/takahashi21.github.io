@@ -1,0 +1,47 @@
+$col-pri:#0079BC;
+$col-sec:#38bbef;
+$col-tert:#40ae4b;
+$col-txt:#333;
+$col-bg:#fff;
+$col-table:#a0bfcf;
+$col-brdr:#ddd;
+$col-dl:#eee;
+$col-maincp:rgba(255, 255, 255,0.75);
+
+@mixin tab {
+    @media (min-width:768px) {
+    @content;
+    }
+}
+
+@mixin pc {
+    @media (min-width:1000px) {
+    @content;
+    }
+}
+
+@mixin pos-ctr {
+top:0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+}
+
+@mixin btn {
+display: block;
+width:192px;
+height: 44px;
+line-height:44px;
+text-align: center;
+border-radius: 22px;
+}
+
+@mixin btn-arw($color) {
+display:block;
+width:12px;
+height: 12px;
+border-top: 2px solid $color;
+border-right: 2px solid $color;
+transform: rotate(45deg);
+}

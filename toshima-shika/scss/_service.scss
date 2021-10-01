@@ -1,0 +1,47 @@
+@use "settings" as s;
+
+#service{
+margin: 0 auto 32px;
+padding: 0 16px;
+
+  @include s.tab(){
+  max-width: 1080px;
+  margin: 32px auto 64px;
+  padding: 0 32px;
+
+    .box-inner{
+    display: flex;
+    align-items: center;
+    }
+
+    .txt{
+    width: 50%;
+    margin-left: 32px;
+    }
+
+  };
+
+  .service-box{
+  margin-bottom: 32px;
+
+    @include s.tab(){
+    margin-bottom: 48px;
+    };
+
+  }
+
+  .photo{
+  width: 280px;
+  margin: 0 auto 16px;
+
+    @include s.tab(){
+    width: 45%;
+    };
+
+  }
+
+
+
+
+
+}
