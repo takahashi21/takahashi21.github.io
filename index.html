@@ -27,24 +27,23 @@
 <header>
 <div class="header-inner">
 <h1>takahashi｜portfolio</h1>
-
 <!-- navigation -->
 <nav id="g-nav">
-<button id="ham-btn"><span></span></button>
 <ul>
     <li id="ls-0"><a href="#pagetop">PageTop</a></li>
     <li id="ls-1"><a href="#about">自己紹介</a></li>
     <li id="ls-2"><a href="#work">制作物</a></li>
     <li id="ls-3"><a href="#skill">スキル</a></li>
-    <li id="ls-4"><a href="#contact">Contact</a></li>
 </ul>
 </nav>
-
-</div>
+</div><!-- ./header-inner -->
 </header>
 
+<!-- ham-btn -->
+<button id="ham-btn"><span></span></button>
+
 <!-- head-area -->
-<section class="head-area"></section>
+<div class="head-area"></div>
 
 <!-- about -->
 <section id="about">
@@ -54,7 +53,99 @@
 <!-- work -->
 <section id="work">
 <h2 class="section-title">制作物</h2>
-<button class="modal_btn" data-micromodal-trigger="modal-1" role="button">modal-1</button>
+
+<h3 class="work-h3">Web制作</h3>
+<div class="work-content">
+<button class="modal_btn" data-micromodal-trigger="modal-1" role="button">
+    <div class="modal-timg">
+    <img src="img/web_toshima-shika.gif" alt="クライアントワークのサムネール">
+    </div>
+    <p>架空歯科サイトの制作</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-2" role="button">
+    <div class="modal-timg">
+    <img src="img/web_fullscreen-nav.gif" alt="">
+    </div>
+    <p>フルスクリーン ナビゲーション</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-3" role="button">
+    <div class="modal-timg">
+    <img src="img/web_furniture-store.gif" alt="">
+    </div>
+    <p>カンプデザインからのコーディング</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-4" role="button">
+    <div class="modal-timg">
+    <img src="img/web_cafe.gif" alt="">
+    </div>
+    <p>カフェのサイト風 シングルページ</p>
+</button>
+</div><!-- ./work-content -->
+
+<h3 class="work-h3">画像制作物</h3>
+<div class="work-content">
+<button class="modal_btn" data-micromodal-trigger="modal-5" role="button">
+    <div class="modal-timg">
+    <img src="img/banner_kagikou.jpg" alt="">
+    </div>
+    <p>modal-5</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-6" role="button">
+    <div class="modal-timg">
+    <img src="img/banner_wag.jpg" alt="">
+    </div>
+    <p>modal-6</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-7" role="button">
+    <div class="modal-timg">
+    <img src="img/banner_food.jpg" alt="">
+    </div>
+    <p>modal-7</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-8" role="button">
+    <div class="modal-timg">
+    <img src="img/banner_sale.jpg" alt="">
+    </div>
+    <p>modal-8</p>
+</button>
+</div><!-- ./work-content -->
+
+<div class="work-content">
+<button class="modal_btn" data-micromodal-trigger="modal-9" role="button">
+    <div class="modal-timg">
+    <img src="img/ai_flier_timg.jpg" alt="">
+    </div>
+    <p>modal-9</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-10" role="button">
+    <div class="modal-timg">
+    <img src="img/ai_cw-logo.svg" alt="">
+    </div>
+    <p>modal-10</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-11" role="button">
+    <div class="modal-timg">
+    <img src="img/ai_logo.gif" alt="">
+    </div>
+    <p>modal-11</p>
+</button>
+
+<button class="modal_btn" data-micromodal-trigger="modal-12" role="button">
+    <div class="modal-timg">
+    <img src="img/ai_logo-trace.jpg" alt="">
+    </div>
+    <p>modal-12</p>
+</button>
+</div><!-- ./work-content -->
+
 </section>
 
 <!-- work modal 1-->
@@ -62,63 +153,293 @@
 <div class="modal-overlay" tabindex="-1" data-micromodal-close>
 <div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
 
-
 <div id="modal-1-content">
 
-<header>
-<h2 id="modal-1-title">modal-1-title</h2>
-</header>
-
+<h2 id="modal-1-title">サイト制作｜架空・歯科サイト</h2>
 <button class="modal-close-btn right-top" aria-label="Close modal" data-micromodal-close><span></span></button>
-<div class="images"><img src="img/furniture-store.jpg" alt=""></div>
 
-<dl class="txt-box">
-<dt class="logo"><img src="img/icon-watch.svg" alt=""></dt>
-<dd>作業時間</dd>
-<dt class="logo"><img src="img/icon-pen.svg" alt=""></dt>
-<dd>作業内容</dd>
-</dl><!-- ./txt-box -->
+<div class="modal-content-img"><img src="img/web_toshima-shika.gif" alt=""></div>
 
-<div class="wrapper">
-<div class="process">
-<h3>制作工程</h3>
+<p class="modal-desc">学校の授業の一環で、架空の歯科医院のWebサイトを制作。<br>
+要件定義やページ構成、サイトデザイン、コーディングまで自分で行った
+</p>
+
+<!-- .modal-flex-wrapper -->
+<div class="modal-flex-wrapper">
+<div class="modal-content-box">
+<h3><img src="img/icon_watch.svg" alt="時計のアイコン">制作時間</h3>
 <ul>
-<li>工程１</li>
-<li>工程２</li>
-<li>工程３</li>
+<li>要件定義、ページ構成：◎日</li>
+<li>デザイン：◎日</li>
+<li>コーディング：◎日</li>
+</ul>
+</div><!-- ./modal-content-box -->
+<div class="modal-content-box">
+<h3><img src="img/icon_pen.svg" alt="ペンのアイコン">作業工程</h3>
+<ul>
+<li>要件定義、ページ構成</li>
+<li>デザイン</li>
+<li>コーディング</li>
+</ul>
+</div><!-- ./modal-content-box -->
+</div>
+
+<!-- .modal-content-box -->
+<div class="modal-content-box">
+<h3>制作のポイント</h3>
+<ul>
+<li>要件定義、ページ構成</li>
+<li>デザイン</li>
+<li>コーディング</li>
 </ul>
 </div>
-<div class="point">
-<h3>学んだこと</h3>
+
+<!-- .modal-content-box -->
+<div class="modal-content-box">
+<h3>気付いたこと</h3>
 <ul>
-<li>内容１</li>
-<li>内容２</li>
-<li>内容３</li>
+<li>要件定義、ページ構成</li>
+<li>デザイン</li>
+<li>コーディング</li>
 </ul>
 </div>
-</div><!-- ./wrapper -->
 
-<button class="to-page"><a href="">サイトを表示する</a></button>
+<button class="to-page"><a href="https://takahashi21.github.io/toshima-shika/" target="_blank">サイトを表示する</a></button>
 <button class="modal-close-btn ctr-btm" aria-label="Close modal" data-micromodal-close>Close</button>
 </div><!-- #/modal-1-content -->
 </div>
 </div>
 </div><!-- #/modal-1 -->
 
+<!-- work modal 2-->
+<div id="modal-2" class="modal-2-container" aria-hidden="true">
+<div class="modal-overlay" tabindex="-1" data-micromodal-close>
+<div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-2-title">
+
+<div id="modal-2-content">
+
+<h2 id="modal-2-title">フルスクリーン ナビゲーション</h2>
+<button class="modal-close-btn right-top" aria-label="Close modal" data-micromodal-close><span></span></button>
+
+<div class="modal-content-img"><img src="img/web_fullscreen-nav.gif" alt=""></div>
+
+<p class="modal-desc">PCからハンバーガーメニューを適用した、フルスクリーンナビゲーションのページ。</p>
+
+<!-- .modal-flex-wrapper -->
+<div class="modal-flex-wrapper">
+<div class="modal-content-box">
+<h3><img src="img/icon_watch.svg" alt="時計のアイコン">制作時間と工程</h3>
+<ul>
+<li>・総制作時間：６時間</li>
+<li>大まかな文書構造：１時間</li>
+<li>メニュー部分とプラグインの設定：２時間</li>
+<li>問い合わせフォームの設定：１時間</li>
+<li>レイアウト：２時間</li>
+</ul>
+</div><!-- ./modal-content-box -->
+<div class="modal-content-box">
+<h3><img src="img/icon_pen.svg" alt="ペンのアイコン">制作のポイント</h3>
+<ul>
+<li>背景用のシェイプ作成ツール"Shape Divider App"の使用</li>
+<li>bxSliderによるスライドとカルーセルの実装</li>
+<li>img要素にborder-radiusを設定し、CSSで画像をクリッピング</li>
+<li>フォントファイルをアップし、font-faceで読み込み</li>
+</ul>
+</div><!-- ./modal-content-box -->
+</div>
+
+<button class="to-page"><a href="http://takahashi21.starfree.jp/work/fullscreen-nav/" target="_blank">サイトを表示する</a></button>
+<button class="modal-close-btn ctr-btm" aria-label="Close modal" data-micromodal-close>Close</button>
+</div><!-- #/modal-2-content -->
+</div>
+</div>
+</div><!-- #/modal-2 -->
+
+<!-- work modal-3-->
+<div id="modal-3" class="modal-3-container" aria-hidden="true">
+<div class="modal-overlay" tabindex="-1" data-micromodal-close>
+<div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-3-title">
+
+<div id="modal-3-content">
+
+<h2 id="modal-3-title">カンプデザインからのコーディング</h2>
+<button class="modal-close-btn right-top" aria-label="Close modal" data-micromodal-close><span></span></button>
+
+<div class="modal-content-img"><img src="img/web_furniture-store.gif" alt=""></div>
+
+<p class="modal-desc">Photoshopで作成したカンプデザインをもとにコーディングを行った。</p>
+
+<!-- .modal-flex-wrapper -->
+<div class="modal-flex-wrapper">
+<div class="modal-content-box">
+<h3><img src="img/icon_watch.svg" alt="時計のアイコン">制作時間と工程</h3>
+<ul>
+<li>・総制作時間：４時間</li>
+<li>カンプデザインの作成（Photoshop）：１時間</li>
+<li>コーディング：２時間</li>
+<li>レスポンジボブ設定：１時間</li>
+</ul>
+</div><!-- ./modal-content-box -->
+<div class="modal-content-box">
+<h3><img src="img/icon_pen.svg" alt="ペンのアイコン">制作のポイント</h3>
+<ul>
+<li>使用画像はカンプデータからアセットで生成</li>
+<li>カラーパレットアプリケーション"colormind"で使用カラーを設定</li>
+</ul>
+</div><!-- ./modal-content-box -->
+</div>
+
+<button class="to-page"><a href="http://takahashi21.starfree.jp/work/furniture-store/" target="_blank">サイトを表示する</a></button>
+<button class="modal-close-btn ctr-btm" aria-label="Close modal" data-micromodal-close>Close</button>
+</div><!-- #/modal-3-content -->
+</div>
+</div>
+</div><!-- #/modal-3 -->
+
+<!-- work modal-4-->
+<div id="modal-4" class="modal-4-container" aria-hidden="true">
+<div class="modal-overlay" tabindex="-1" data-micromodal-close>
+<div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="modal-4-title">
+
+<div id="modal-4-content">
+
+<h2 id="modal-4-title">カフェのサイト風 シングルページ</h2>
+<button class="modal-close-btn right-top" aria-label="Close modal" data-micromodal-close><span></span></button>
+
+<div class="modal-content-img"><img src="img/web_cafe.gif" alt=""></div>
+
+<p class="modal-desc">シングルページ</p>
+
+<!-- .modal-flex-wrapper -->
+<div class="modal-flex-wrapper">
+<div class="modal-content-box">
+<h3><img src="img/icon_watch.svg" alt="時計のアイコン">制作時間と工程</h3>
+<ul>
+<li>・総制作時間：４時間</li>
+<li>ロゴの作成（Illustrator）：１時間</li>
+<li>スムーススクロール、タブパネルなどjQueryの設定：２時間</li>
+<li>コーディング：１時間</li>
+</ul>
+</div><!-- ./modal-content-box -->
+<div class="modal-content-box">
+<h3><img src="img/icon_pen.svg" alt="ペンのアイコン">制作のポイント</h3>
+<ul>
+<li>YouTubeやTwitter、Google Map、Google Formの埋め込み表示</li>
+<li>ページ内移動はスムーススクロールを設定</li>
+<li>jQueryのclickイベントを使った、タブパネルの作成</li>
+</ul>
+</div><!-- ./modal-content-box -->
+</div>
+
+<button class="to-page"><a href="http://takahashi21.starfree.jp/work/furniture-store/" target="_blank">サイトを表示する</a></button>
+<button class="modal-close-btn ctr-btm" aria-label="Close modal" data-micromodal-close>Close</button>
+</div><!-- #/modal-4-content -->
+</div>
+</div>
+</div><!-- #/modal-4 -->
+
+
 <!-- skill -->
 <section id="skill">
-<h2 class="section-title">skill</h2>
+<h2 class="section-title">スキル</h2>
+
+<!-- .skill-content-wrapper -->
+<div class="skill-content-wrapper">
+<h3 class="skill-h3">Web制作</h3>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_html5.svg" alt="">
+    </div>
+    <div class="skill-icon">
+    <img src="img/icon_css3.svg" alt="">
+    </div>
+    <div class="skill-icon">
+    <img src="img/icon_sass.svg" alt="">
+    </div>
+    <p class="skill-txt">適切な見出しの設定と文書構造を記述できる。flexboxやpositionを使ったレイアウトの作成。<br>
+    現在はSass（scss）でコーディングを行っており、ファイルのpartial化、mixinの使用できる</p>
+</div>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_js.svg" alt="">
+    </div>
+    <div class="skill-icon">
+    <img src="img/icon_jQuery.svg" alt="">
+    </div>
+    <p class="skill-txt">if文とfor文、DOM操作、Ajaxでの外部ファイル読み込み、プラグインの使用が可能。<br>
+    じゃんけんアプリケーションの作成
+    </p>
+</div>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_PHP.svg" alt="">
+    </div>
+    <div class="skill-icon">
+    <img src="img/icon_wordpress.svg" alt="">
+    </div>
+    <p class="skill-txt">オリジナルテーマの作成</p>
+</div>
+</div>
+
+<!-- .skill-content-wrapper -->
+<div class="skill-content-wrapper">
+<h3 class="skill-h3">画像編集</h3>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_ps.svg" alt="">
+    </div>
+    <p class="skill-txt">基礎的な操作ができる。画像のトリミングやアセット、バナー、カンプデザインの作成など</p>
+</div>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_ai.svg" alt="">
+    </div>
+    <p class="skill-txt">基礎的な操作ができる。バナー用の細かいパーツやロゴ、フライヤーの作成など</p>
+</div>
+</div>
+
+<div class="skill-content-wrapper">
+<h3 class="skill-h3">Office系</h3>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_word.svg" alt="">
+    </div>
+    <p class="skill-txt">１ページ構成の簡単なビジネス文書を作成できる</p>
+</div>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_excel.svg" alt="">
+    </div>
+    <p class="skill-txt">グラフの作成や関数が使用できる。indexとmatchを組み合わせたデータの抽出など</p>
+</div>
+<!-- .skill-content -->
+<div class="skill-content">
+    <div class="skill-icon">
+    <img src="img/icon_ppt.svg" alt="">
+    </div>
+    <p class="skill-txt">簡単な資料作成ができる。図やグラフの挿入など</p>
+</div>
+</div>
+
 </section>
 
-<!-- contact -->
-<section id="contact">
-<h2 class="section-title">contact</h2>
-</section>
-
+<!-- to-top btn -->
+<div class="to-top-btn">
 <a id="to-top" href="#"></a>
+</div>
 
 <!-- footer -->
-<footer><p><small>&copy <span id="thisYear"></span> takahashi</small></p></footer>
+<footer>
+<p class="icon8"><a href="https://icons8.jp/license">icon by icons8</a></p>
+<p><small>&copy <span id="thisYear"></span> takahashi</small></p>
+</footer>
 
 <!-- script -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

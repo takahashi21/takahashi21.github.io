@@ -1,24 +1,29 @@
-@use "_reset";
- 
+@use "reset";
+@use "nav";
+@use "modal"; 
+
 $col-pri:#509993;
 $col-sec:#153754;
 $col-tert:#b0a596;
 $col-quat:#ebded3;
+
 $col-txt:#1b191e;
 $col-bg:#fff;
+
+$col-bgtp: rgba(255,255,255,0.5);
 $col-brdr:#999;
 $col-bsdw:#f9fdff;
 
-$tab:959px;
-$sp:767px;
+$tab:960px;
+$sp:560px;
 
-@mixin tab-point {
+@mixin tab {
 @media (max-width:$tab) {
 @content;
 }
 }
 
-@mixin sp-point {
+@mixin sp {
 @media (max-width:$sp) {
 @content;
 }
@@ -30,15 +35,6 @@ height: 100%;
 object-fit: cover;
 }
 
-@mixin pos-ctr {
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-margin: auto;    
-}
-
-
 body{
 font-family: 'Open Sans', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
 }
@@ -49,22 +45,29 @@ font-family: 'Poiret One', cursive, "游ゴシック体", "Yu Gothic", YuGothic,
 
 h1{
 font-size: 42px;
+    @include sp(){
+    font-size: 28px;
+    }
 }
 
 h2{
 font-size: 28px;
+margin-bottom: 16px;
+}
+
+h3{
+margin-bottom: 16px;
 }
 
 //header
-
-#pagetop>header{
+header{
 height: 80px;
-
     .header-inner{
     width:100%;
     height: 80px;
     padding: 0 20px;
-    background: $col-bg;
+    background: $col-bgtp;
+    backdrop-filter: blur(2px);
     border-bottom: 1px solid $col-brdr;
     display: flex;
     justify-content: space-between;
@@ -72,87 +75,79 @@ height: 80px;
     position: fixed;
     top:0;
     z-index: 2;
+        @include sp(){
+        position: unset;
+        }
     }
-
-}
-
-//navigation
-
-#g-nav{
-width:50%;
-display: flex;
-justify-content: right;
-align-items: center;
-
-    ul{
-    width: inherit;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    }
-
-    li{
-    width: 25%;
-    text-align: center;
-    }
-
-    a{
-    color: $col-txt;
-    }
-
-    li.current>a{
-    text-decoration: underline 2px $col-pri;
-    text-underline-offset: 4px;
-    }
-
-    #ls-0.current>a{
-    text-decoration: none;
-    }
-
-}
-
-
-#ham-btn{
-display: none;
-order: 2;
-width: 44px;
-height: 44px;
-background: $col-pri;
 }
 
 //head-area
-
 .head-area{
 width: 100%;
 height: 50vh;
 background: $col-pri;
 }
-
-
+//section
 section{
-width: 100%;
-height: 100vh;
+max-width: 1280px;
+height: auto;
 padding: 0 16px;
 margin: 0 auto 96px;
 }
-
 //about
-
 //work
-
 //skill
+.skill-h3{
+margin-bottom: 16px;
+}
+.skill-content-wrapper{
+max-width: 960px;
+margin: 0 auto 32px;
+}
+.skill-content-wrapper:nth-of-type(2){
+    .skill-content{
+    width: 100%;
+        .skill-txt{
+        padding: 0 32px;
+        }
+    }
+}
+.skill-content{
+width: 100%;
+margin-bottom: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+    @include tab(){
+    }
+    @include sp(){
+    flex-wrap: wrap;
+    gap: 0;
+    }
+}
+.skill-icon{
+width: 64px;
+height: 64px;
+margin-right: 16px;
+    img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    }
+}
+.skill-txt{
+width: 100%;
+padding: 0 16px;
+}
 
 //contact
-
 #contact{
 height: 50vh;
 margin: 0 auto 96px;
 }
 
 //to-top btn
-
 #to-top{
 display: none;
 width: 60px;
@@ -162,7 +157,6 @@ border-radius: 30px;
 position: fixed;
 right:20px;
 bottom: 20px;
-
     &::after{
     content: "";
     display: block;
@@ -178,202 +172,29 @@ bottom: 20px;
     left: 0;
     margin:auto;
     }
-
     &:hover{
     opacity:0.8;
     }
-
 }
 
 //footer
-
 footer{
 width: 100%;
 height: 200px;
 padding-top: 80px;
 background:$col-txt;
-
     p{
     text-align: center;
     color: $col-bg;
+    margin-bottom: 16px;
     }
-
-}
-
-//modal
-
-.modal_btn{
-width: 180px;
-height: 40px;
-margin: 0 auto;
-background: $col-pri;
-color: $col-txt;
-
-    &:hover{
-    opacity: 0.8;
-    }
-
-}
-
-#modal-1{
-display: none;
-}
-
-#modal-1.is-open{
-display: block;
-}
-
-.modal-overlay{
-position: fixed;
-@include pos-ctr;
-z-index: 2;
-background: rgba(0,0,0,0.5);
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden auto;
-padding-bottom: 20px;
-}
-
-.modal-container{
-width: 90%;
-position: absolute;
-top: 20px;
-
-    header{
-    margin-bottom: 32px;
-    }
-
-    h2{
-    width: 100%;
-    text-align: center;
-    }
-
-    .images{
-    width:100%;
-    margin: 0 auto 40px;
-
-        img{
-        @include obj-fit;
-        }
-
-    }
-
-    .txt-box{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 40px;
-
-        dd{
-        width: calc(100% - 54px);
-        }
-
-        .logo{
-        width: 44px;
-        height: 44px;
-        }
-
-        img{
-        @include obj-fit;
-        }
-
-    }
-
-    .wrapper{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 40px;
-    }
-
-    ul{
-    padding-left: 24px;
-    list-style-type: disc;
-    }
-
-    .process{
-    width:300px;
-    height:200px;
-    border: 1px solid $col-brdr;
-    }
-
-    .point{
-    width:300px;
-    height:200px;
-    border: 1px solid $col-brdr;
-    }
-
-    button:hover{
-    opacity: 0.8;
-    }
-
     a{
+    font-size: 14px;
     color: $col-bg;
     }
-
-}//.modal-container
-
-#modal-1-content{
-max-width: 1080px;
-background-color: $col-bg;
-padding: 20px;
-border-radius: 4px;
-margin: 0 auto 32px;
-position: relative;
-}
-
-.to-page{
-display: block;
-width: 160px;
-height: 44px;
-color: $col-bg;
-background: $col-sec;
-margin: 0 auto 40px;
-}
-
-.modal-close-btn{
-display: block;
-width: 120px;
-height: 44px;
-color: $col-bg;
-background: $col-sec;
-}
-
-.modal-close-btn.ctr-btm{
-margin: 0 auto 40px;
-}
-
-.modal-close-btn.right-top{
-width: 44px;
-position: absolute;
-top: 10px;
-right: 10px;
-
-    span{
-    display: block;
-    width:28px;
-    height: 2px;
-    background: $col-bg;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    transform: rotate(45deg);
+    a:hover{
+    text-decoration: underline 1px $col-bg;
     }
-
-    span::after{
-    content: "";
-    display: block;
-    width:28px;
-    height: 2px;
-    background: $col-bg;
-    transform: rotate(90deg);
-    }
-
 }
 
 
