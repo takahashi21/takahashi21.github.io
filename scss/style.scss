@@ -6,13 +6,8 @@ $col-pri:#509993;
 $col-sec:#153754;
 $col-tert:#b0a596;
 $col-quat:#ebded3;
-
 $col-txt:#1b191e;
 $col-bg:#fff;
-
-$col-bgtp: rgba(255,255,255,0.5);
-$col-brdr:#999;
-$col-bsdw:#f9fdff;
 
 $tab:960px;
 $sp:560px;
@@ -35,71 +30,178 @@ height: 100%;
 object-fit: cover;
 }
 
-body{
-font-family: 'Open Sans', "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-}
-
-h1,h2,h3{
-font-family: 'Poiret One', cursive, "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-}
-
 h1{
 font-size: 42px;
+font-family: "Poiret One",cursive,"游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
     @include sp(){
     font-size: 28px;
     }
 }
 
 h2{
-font-size: 28px;
+font-size: 32px;
 margin-bottom: 16px;
+font-family: "Poiret One",cursive,"游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
+    @include sp(){
+    font-size: 22px;
+    }
 }
 
 h3{
+font-size: 24px;
 margin-bottom: 16px;
+font-family: "Poiret One",cursive,"游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
 }
 
 //header
 header{
-height: 80px;
-    .header-inner{
-    width:100%;
-    height: 80px;
-    padding: 0 20px;
-    background: $col-bgtp;
-    backdrop-filter: blur(2px);
-    border-bottom: 1px solid $col-brdr;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top:0;
-    z-index: 2;
-        @include sp(){
-        position: unset;
-        }
+height: 64px;
+position: absolute;
+top:0;
+right: 0;
+left: 0;
+margin: auto;
+z-index: 2;
+width:calc(100% - 64px);
+height: 64px;
+padding: 0 16px;
+border-bottom: 1px solid $col-bg;
+display: flex;
+justify-content: space-between;
+align-items: center;
+    h1{
+    color: $col-bg;
     }
+@include tab(){
+width:100%;
+}
 }
 
-//head-area
-.head-area{
-width: 100%;
-height: 50vh;
-background: $col-pri;
-}
 //section
 section{
 max-width: 1280px;
 height: auto;
 padding: 0 16px;
 margin: 0 auto 96px;
+@include tab(){
+margin: 0 auto 48px;
 }
+    h3{
+    position: relative;
+    @include sp(){
+    font-size: 20px;
+    }
+    &::before{
+    content: "";
+    display: block;
+    width: 208px;
+    height: 1px;
+    background: $col-pri;
+    position: absolute;
+    bottom: 0;
+    }
+    &::after{
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-left: 1px solid $col-pri;
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 6px;
+    left: 193px;
+    }
+    }
+}
+
 //about
-//work
+#about{
+width: 100%;
+max-width: unset;
+padding: 0;
+height: 100vh;
+background: url('../img/w1920_ihor-malytskyi-IfZagMEc62E-unsplash.jpg') no-repeat center/cover;
+position: relative;
+}
+
+#about::after{
+content: "";
+display: block;
+width: 100%;
+height: 100vh;
+position: absolute;
+top: 0;
+left: 0;
+background: rgb(21, 55, 84,0.5);
+opacity: 0.5;
+}
+
+#about:hover{
+    &::after{
+    background: linear-gradient(45deg,$col-sec 0%,$col-tert 40%,$col-pri 80%);
+    }
+    .about-content{
+    border: 1px solid $col-bg;
+    transition: 0.2s;
+        h2{
+        transform: translateY(0);
+        transition: 0.4s;
+        }
+        p{
+        font-family: "Open Sans","游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        transition: 0.4s;
+        }
+    }
+}
+
+.about-content{
+width: 80%;
+height: 80%;
+position: absolute;
+top: 64px;
+right: 0;
+bottom: 0;
+left: 0;
+margin: auto;
+z-index: 1;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+    h2{
+    font-size: 64px;
+    color: $col-bg;
+    padding: 0 16px;
+    margin-bottom: 32px;
+    transform: translateY(64px);
+    font-family: "Poiret One",cursive,"游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
+    @include tab(){
+    font-size: 48px;
+    }
+    }
+    p{
+    opacity: 0;
+    visibility: hidden;
+    width: 50%;
+    padding: 0 16px;
+    color: $col-bg;
+    @include tab(){
+    width: 80%;
+    }
+    }
+}
+
+
+//work _modal.scss
+
 //skill
 .skill-h3{
 margin-bottom: 16px;
 }
+
 .skill-content-wrapper{
 max-width: 960px;
 margin: 0 auto 32px;

@@ -2,13 +2,9 @@ $col-pri:#509993;
 $col-sec:#153754;
 $col-tert:#b0a596;
 $col-quat:#ebded3;
-
 $col-txt:#1b191e;
 $col-bg:#fff;
-
 $col-bgtp: rgba(255,255,255,0.5);
-$col-brdr:#999;
-$col-bsdw:#f9fdff;
 
 $tab:960px;
 $sp:560px;
@@ -32,42 +28,62 @@ object-fit: cover;
 }
 
 #g-nav{
-width:50%;
+width: 320px;
 display: flex;
-justify-content: right;
 align-items: center;
 
-@include sp(){
+@include tab(){
 display: none;
 }
-
     ul{
     width: inherit;
-    height: 80px;
+    height: 64px;
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 0;
+    justify-content: right;
+    gap: 32px;
     }
 
     li{
-    width: 25%;
     text-align: center;
     position: relative;
     } 
 
     a{
-    color: $col-txt;
+    color: $col-bg;
+    padding: 16px;
+    font-family: "Open Sans","游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
     }
 
-    li.current>a{
-    text-decoration: underline 2px $col-pri;
+    a:hover{
+    text-decoration: underline 2px $col-bg;
     text-underline-offset: 4px;
     }
 
-    #ls-0.current>a{
-    text-decoration: none;
-    }
+}
+
+#g-nav.is-active{
+width: 100vw;
+height: 100vh;
+background: $col-tert;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: center;
+ul{
+width: 100%;
+height: 320px;
+flex-direction: column;
+justify-content: center;
+}
+a{
+color: $col-sec;
+font-weight: bold;
+font-size: 22px;
+}
 
 }
 
@@ -78,12 +94,13 @@ width: 64px;
 height: 64px;
 background: $col-bgtp;
 position: fixed;
-top: 8px;
-right: 0;
+top: 0;
+right: 16px;
 z-index: 2;
 
-@include sp(){
+@include tab(){
 display: block;
+right: 0;
 }
 
 span{
@@ -130,6 +147,7 @@ margin: auto;
 }
 
 #ham-btn.is-active{
+background: unset;
 span{
 background: transparent;
 }
