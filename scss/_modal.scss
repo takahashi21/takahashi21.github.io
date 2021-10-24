@@ -106,7 +106,7 @@ margin: 0 auto 32px;
 position: relative;
 @include s.sp(){
 max-width: unset;
-width: calc(100% - 32px);
+width: calc(100vw - 64px);
     h2{
     font-size: 24px;
     width: 80%;
@@ -143,6 +143,7 @@ top: 8px;
 right: 8px;
 @include s.sp(){
 top: 32px;
+right: 0;
 }
     span{
     display: block;

@@ -38,6 +38,12 @@ $(this).not(':animated').toggleClass('is-active');
 $(gnav).not(':animated').toggleClass('is-active');
 });
 
+$('#g-nav a').on('click',function(){
+$(this).not(':animated').toggleClass('is-active');
+$(gnav).not(':animated').toggleClass('is-active');
+$(hamBtn).not(':animated').toggleClass('is-active');
+});
+
 // to-top-btn
 const toTop = $('#to-top');
 
