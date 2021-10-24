@@ -1,6 +1,6 @@
 /* JavaScript */
 
-//micromodal
+// micromodal
 MicroModal.init({
   //onShow: modal => console.info(`${modal.id} is shown`), // [1]
   //onClose: modal => console.info(`${modal.id} is hidden`), // [2]
@@ -14,46 +14,65 @@ MicroModal.init({
   //debugMode: true // [10] */
 });
 
-//copylight
+// copylight
 document.getElementById('thisYear').innerHTML = (new Date()).getFullYear();
 
 /* jQuery */
-
 $(function(){
 
-//navigation smooth-scroll
+// navigation smooth-scroll
 const scrlbtn = $('#g-nav>ul a');
+
 $(scrlbtn).on('click',function(){
-
 const scrltgt = $(this).attr('href');
-
 $('html,body').animate({scrollTop:$(scrltgt).offset().top},400,'swing');
 return false;
-
 });
 
-//ham-btn
+// ham-btn
 const gnav = $('#g-nav');
 const hamBtn = $('#ham-btn');
-$(hamBtn).on('click',function(){
 
+$(hamBtn).on('click',function(){
 $(this).not(':animated').toggleClass('is-active');
 $(gnav).not(':animated').toggleClass('is-active');
-
 });
 
-//to-top-btn
+// to-top-btn
 const toTop = $('#to-top');
+
 $(toTop).on('click',function(){
 $('html,body').animate({scrollTop:0},400);
 return false;
 });
 
-/* scroll events */
+// open codepen
+const cdpen = $('#codepen');
+const cpWrap = $('#codepen-wrapper');
+let cdpenFlg = 'off';
 
+$(cdpen).on('click',function(){
+
+$(this).toggleClass('open')
+$(cpWrap).toggleClass('open');
+
+  // #codepen テキストきりかえ
+  if(cdpenFlg === 'off'){
+  $(cdpen).text('＞とじる');
+  cdpenFlg = 'on';
+
+  }else{
+
+  $(cdpen).text('＞表示する');
+  cdpenFlg = 'off';
+  }
+
+});
+
+// scroll events
 $(window).scroll(function(){
 
-//to-top btn
+  // to-top btn
 if($(this).scrollTop() > 399){
 $(toTop).fadeIn();
 }else{
