@@ -38,9 +38,9 @@ $(this).not(':animated').toggleClass('is-active');
 $(gnav).not(':animated').toggleClass('is-active');
 });
 
-$('#g-nav.is-active a').on('click',function(){
-$(gnav).not(':animated').removeClass('is-active');
-$(hamBtn).not(':animated').removeClass('is-active');
+$('#g-nav a').on('click',function(){
+$(gnav).removeClass('is-active');
+$(hamBtn).removeClass('is-active');
 });
 
 // to-top-btn
