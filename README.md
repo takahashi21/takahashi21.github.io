@@ -65,6 +65,6 @@ Web制作に携わりたいと思うようになりました。
 
 - Power Point
 
-    - 簡単な資料作成が可能。図やグラフの挿入など。
+    - 簡単な資料作成が可能。図やグラフの挿入など。  
 
 ## ポートフォリオサイト([https://takahashi21.github.io/](https://takahashi21.github.io/))
