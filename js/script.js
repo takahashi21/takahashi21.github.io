@@ -12,6 +12,10 @@ MicroModal.init({
   //awaitOpenAnimation: false, // [8]
   //awaitCloseAnimation: false, // [9]
   //debugMode: true // [10] */
+  onClose: function(modal, element, event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
 });
 
 // copylight
