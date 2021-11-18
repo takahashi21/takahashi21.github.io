@@ -1,7 +1,7 @@
 @use "settings" as s;
 
 #g-nav{
-width: 320px;
+width: 352px;
 display: flex;
 align-items: center;
 
@@ -24,6 +24,7 @@ display: none;
 
     a{
     color: s.$col-bg;
+    font-size: 18px;
     padding: 16px;
     font-family: "Open Sans","游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
     }
@@ -31,6 +32,9 @@ display: none;
     a:hover{
     text-decoration: underline 2px s.$col-bg;
     text-underline-offset: 4px;
+    @include s.tab(){
+    text-decoration: none;
+    }
     }
 
 }
@@ -55,7 +59,10 @@ justify-content: center;
 a{
 color: s.$col-sec;
 font-weight: bold;
-font-size: 22px;
+font-size: 32px;
+@include s.sp(){
+font-size: 28px;
+}
 }
 
 }

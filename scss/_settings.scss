@@ -51,3 +51,10 @@ font-size: 18px;
 margin-bottom: 16px;
 font-family: "游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ","Meiryo",sans-serif;
 }
+
+p{
+font-size: 18px;
+@include sp(){
+font-size: 16px;
+}
+}
