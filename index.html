@@ -296,6 +296,7 @@ janken / JavaScript</a> by takahashi210517 (<a href="https://codepen.io/takahash
 <ul>
 <li>・モバイルファーストで制作</li>
 <li>・ファイルのパーシャル化、mixinの使用など、Sass(scss)でコーディングを行いました</li>
+<li>・「当院について」や「診療内容」ページでは、テキストも作成しています。地域に密着した、親しみやすい歯科医院をイメージ。</li>
 <li>・Lighhouseでページの表示速度やアクセシビリティを確認し、改善しました</li>
 </ul>
 </div><!-- ./modal-content-box -->
@@ -303,7 +304,29 @@ janken / JavaScript</a> by takahashi210517 (<a href="https://codepen.io/takahash
 
 <!-- .modal-content-box -->
 <div class="modal-content-box">
-<h3>気付いたこと</h3>
+<h3>Lighhouseのスコア改善</h3>
+<h4>・改善前スコア</h4>
+<div class="lighthouse-img"><img src="img/lighthouse_before.JPG" alt=""></div>
+<h4>・改善後スコア</h4>
+<div class="lighthouse-img"><img src="img/lighthouse_after.JPG" alt=""></div>
+<h4>１．Peformance</h4>
+<p>
+Time to Interactive＝操作可能になるまでの時間と、<br>
+Largest Contentful Paint＝最も大きい画像が表示されるまでの時間が長かったため、<br>
+画像サイズを見直しました。
+</p>
+<h4>２．Accessibility</h4>
+<p>
+spおよびタブレットレイアウトのメニューボタンに「メニューを開く」のテキストを追加しました。<br>
+アイコンのaltに抜けがあったので追加。
+</p>
+<h4>３．SEO</h4>
+<p>
+メタディスクリプションを追加。<br>
+スコアには影響ありませんが、OGPの設定も追加しました。
+</p>
+
+<h3>反省点</h3>
 <h4>１．ラフデザインまではスムーズに進んだが、カンプデザイン作成に時間がかかった。</h4>
 <p>
 ・原因はカンプ作成時点でデザインの詳細を詰められてなかったこと、単純にPsでの作業量が想像よりも多かったこと。<br>
@@ -312,7 +335,7 @@ janken / JavaScript</a> by takahashi210517 (<a href="https://codepen.io/takahash
 </p>
 <h4>２．SPページのデザインは、カンプデザインや、PCのDeveloper Toolsでリサイズして確認していたが、<br>実機で見るとかなり違和感を感じた。</h4>
 <p>
-・ボタン小さすぎ、スクロールの速度遅すぎと感じることが多かった。<br>
+・ボタンが小さすぎ、スクロール速度は遅すぎると感じた。<br>
 ・使いやすい、デザインがいいと感じたサイトのナビゲーションやボタンのサイズに注目し、「このぐらいのサイズや速度がちょうどいい」という感覚を身につけたい。
 </p>
 </div>

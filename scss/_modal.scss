@@ -302,3 +302,18 @@ height: 680px;
     height: unset;
     }
 }
+
+.lighthouse-img{
+width: 75%;
+border: 1px solid s.$col-brdr;
+margin-bottom: 16px;
+    @include s.tab(){
+    width: 100%;
+    }
+
+    img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    }
+}
