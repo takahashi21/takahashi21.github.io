@@ -28,7 +28,7 @@ Web制作に携わりたいと思うように。
 
     - おみくじやじゃんけん程度のアプリケーションが作成できる。([CodePen：じゃんけんプログラム](https://codepen.io/takahashi210517/pen/WNjxYmx))
 
-- php , WordPress
+- PHP , WordPress
 
     - Google Formにデータだけ転送するフォームの作成、外部ファイル化したHTMLの読みこみ、  
     WordPressオリジナルテーマの作成ができる。
