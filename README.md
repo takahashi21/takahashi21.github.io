@@ -20,7 +20,7 @@ Web制作に携わりたいと思うように。
 
     - 適切な見出しの設定と文書構造を記述できる。flexboxやpositionを使ったレイアウトの作成など。
 
-    - 現在はSass(scss)でコーディングを行っており、ファイルをpartial化し、mixinを使用している。
+    - 現在はSass(scss)でコーディングを行っており、ファイルをpartial化し、mixinを使用。
 
 - JavaScript , jQuery
 
