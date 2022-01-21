@@ -26,7 +26,7 @@ Web制作に携わりたいと思うように。
 
     - if文とfor文、DOM操作、Ajaxでの外部ファイル読み込み、プラグインの使用が可能。
 
-    - おみくじやじゃんけん程度のアプリケーションが作成できる。([CodePen：じゃんけんプログラム](https://codepen.io/takahashi210517/pen/WNjxYmx))
+    - おみくじやじゃんけん程度の簡単なアプリケーションが作成できる。([CodePen：じゃんけんプログラム](https://codepen.io/takahashi210517/pen/WNjxYmx)), ([CodePen：素数探索プログラム](https://codepen.io/takahashi210517/pen/jOGjLRb))
 
 - PHP , WordPress
 
