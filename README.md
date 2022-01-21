@@ -33,7 +33,7 @@ Web制作に携わりたいと思うように。
     - Google Formにデータだけ転送するフォームの作成、外部ファイル化したHTMLの読みこみ、  
     WordPressオリジナルテーマの作成ができる。
     
-    - PDOを利用してMySQLに接続し、データの挿入や取得を行うことができる。([掲示板風アプリケーション](http://takahashi21.starfree.jp/work/boads/boads1.php))
+    - PDOを利用してMySQLに接続し、データの挿入や取得を行うことができる。([掲示板風アプリケーション](http://takahashi21.starfree.jp/work/boads/index.php))
 
     - 環境構築にはXAMPPおよびLocal by Flywheelを使用したことがある。
 
